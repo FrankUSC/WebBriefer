@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="roundedMask">
+      <rect width="32" height="32" fill="black"/>
+      <rect width="32" height="32" rx="6" fill="white"/>
+    </mask>
+  </defs>
+  <g mask="url(#roundedMask)">
+    <rect width="32" height="32" rx="6" fill="#4285F4"/>
+    <path d="M6 8h20v2H6V8zm0 6h20v2H6v-2zm0 6h14v2H6v-2z" fill="white"/>
+    <circle cx="24" cy="22" r="3" fill="white"/>
+    <path d="M22.5 21.5l2 2 3-3" stroke="#4285F4" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>

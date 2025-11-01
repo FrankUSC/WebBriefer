@@ -1,0 +1,80 @@
+{
+  "name": "webbriefer",
+  "version": "1.0.0",
+  "description": "Transform complex web content into personalized, accessible summaries using Chrome's built-in AI capabilities",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'No build process required for Chrome extension'",
+    "test": "echo 'Manual testing required - see README.md'",
+    "lint": "echo 'Linting not configured'",
+    "package": "zip -r webbriefer-v1.0.0.zip . -x '*.git*' 'node_modules/*' '*.DS_Store' 'package-lock.json'",
+    "dev": "echo 'Load extension in Chrome Developer Mode - see README.md'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "summarization",
+    "gemini-nano",
+    "chrome-ai",
+    "web-summarizer",
+    "personalization",
+    "accessibility",
+    "translation",
+    "manifest-v3"
+  ],
+  "author": {
+    "name": "WebBriefer Team",
+    "email": "team@webbriefer.com",
+    "url": "https://github.com/yourusername/WebBriefer"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/WebBriefer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/WebBriefer/issues"
+  },
+  "homepage": "https://github.com/yourusername/WebBriefer#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 127"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "extensionInfo": {
+    "manifestVersion": 3,
+    "chromeMinVersion": "127.0.0.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "aiLanguageModelOriginTrial",
+      "aiSummarizerOriginTrial",
+      "aiTranslatorOriginTrial"
+    ],
+    "apis": [
+      "Chrome Language Model API (Gemini Nano)",
+      "Chrome Summarizer API",
+      "Chrome Translator API",
+      "Chrome Storage API"
+    ]
+  },
+  "hackathon": {
+    "event": "Google Chrome Built-in AI Challenge 2025",
+    "category": "Chrome Extension",
+    "features": [
+      "Personalized AI Summaries",
+      "Multi-language Translation",
+      "Interactive Q&A",
+      "Privacy-first Local Processing",
+      "Material Design UI"
+    ],
+    "aiApis": [
+      "ai.languageModel",
+      "ai.summarizer", 
+      "ai.translator"
+    ]
+  }
+}

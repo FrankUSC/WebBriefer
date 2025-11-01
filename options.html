@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebBriefer Settings</title>
+    <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <img src="icons/icon48.svg" alt="WebBriefer" class="logo">
+                <div class="header-text">
+                    <h1>WebBriefer Settings</h1>
+                    <p>Personalize your AI-powered web summaries</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <form id="profileForm" class="profile-form">
+                <!-- Personal Information Section -->
+                <section class="form-section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <p class="section-description">Help us tailor summaries to your background and preferences.</p>
+
+                    <div class="form-group">
+                        <label for="age" class="form-label">Age</label>
+                        <div class="age-input-group">
+                            <input type="range" id="ageSlider" class="age-slider" min="8" max="100" value="25">
+                            <input type="number" id="age" class="age-input" min="8" max="100" value="25">
+                            <span class="age-unit">years old</span>
+                        </div>
+                        <div class="form-hint">This helps us adjust the complexity of summaries</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation" class="form-label">Role/Occupation</label>
+                        <select id="occupation" class="form-select" required>
+                            <option value="">Select your role...</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher/Educator</option>
+                            <option value="researcher">Researcher/Academic</option>
+                            <option value="developer">Software Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Manager/Executive</option>
+                            <option value="consultant">Consultant</option>
+                            <option value="analyst">Analyst</option>
+                            <option value="writer">Writer/Journalist</option>
+                            <option value="lawyer">Lawyer</option>
+                            <option value="doctor">Doctor/Healthcare</option>
+                            <option value="engineer">Engineer</option>
+                            <option value="marketer">Marketing Professional</option>
+                            <option value="sales">Sales Professional</option>
+                            <option value="entrepreneur">Entrepreneur</option>
+                            <option value="retired">Retired</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-hint">We'll adapt technical language based on your field</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education" class="form-label">Education Level</label>
+                        <select id="education" class="form-select" required>
+                            <option value="">Select education level...</option>
+                            <option value="elementary">Elementary School</option>
+                            <option value="middle">Middle School</option>
+                            <option value="high">High School</option>
+                            <option value="associate">Associate Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="doctorate">Doctorate/PhD</option>
+                            <option value="professional">Professional Degree</option>
+                        </select>
+                        <div class="form-hint">Helps determine appropriate vocabulary level</div>
+                    </div>
+                </section>
+
+                <!-- Language Preferences Section -->
+                <section class="form-section">
+                    <h2 class="section-title">Language Preferences</h2>
+                    <p class="section-description">Choose your preferred language for summaries and translations.</p>
+
+                    <div class="form-group">
+                        <label for="preferredLanguage" class="form-label">Preferred Language</label>
+                        <select id="preferredLanguage" class="form-select" required>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Spanish (Español)</option>
+                            <option value="fr">🇫🇷 French (Français)</option>
+                            <option value="de">🇩🇪 German (Deutsch)</option>
+                            <option value="it">🇮🇹 Italian (Italiano)</option>
+                            <option value="pt">🇵🇹 Portuguese (Português)</option>
+                            <option value="ru">🇷🇺 Russian (Русский)</option>
+                            <option value="ja">🇯🇵 Japanese (日本語)</option>
+                            <option value="ko">🇰🇷 Korean (한국어)</option>
+                            <option value="zh">🇨🇳 Chinese (中文)</option>
+                            <option value="ar">🇸🇦 Arabic (العربية)</option>
+                            <option value="hi">🇮🇳 Hindi (हिन्दी)</option>
+                            <option value="nl">🇳🇱 Dutch (Nederlands)</option>
+                            <option value="sv">🇸🇪 Swedish (Svenska)</option>
+                            <option value="no">🇳🇴 Norwegian (Norsk)</option>
+                            <option value="da">🇩🇰 Danish (Dansk)</option>
+                            <option value="fi">🇫🇮 Finnish (Suomi)</option>
+                            <option value="pl">🇵🇱 Polish (Polski)</option>
+                            <option value="tr">🇹🇷 Turkish (Türkçe)</option>
+                            <option value="th">🇹🇭 Thai (ไทย)</option>
+                        </select>
+                        <div class="form-hint">Summaries will be translated to this language if not originally in English</div>
+                    </div>
+                </section>
+
+                <!-- Summary Preferences Section -->
+                <section class="form-section">
+                    <h2 class="section-title">Summary Preferences</h2>
+                    <p class="section-description">Customize how summaries are generated for you.</p>
+
+                    <div class="form-group">
+                        <label for="summaryStyle" class="form-label">Summary Style</label>
+                        <select id="summaryStyle" class="form-select">
+                            <option value="balanced">Balanced - Mix of key points and details</option>
+                            <option value="concise">Concise - Focus on main points only</option>
+                            <option value="detailed">Detailed - Include more context and examples</option>
+                            <option value="bullet">Bullet Points - Structured list format</option>
+                        </select>
+                        <div class="form-hint">Choose how you prefer information to be presented</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Content Focus</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="focusKeyPoints" checked>
+                                <span class="checkmark"></span>
+                                Key points and main ideas
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="focusNumbers">
+                                <span class="checkmark"></span>
+                                Statistics and numbers
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="focusQuotes">
+                                <span class="checkmark"></span>
+                                Important quotes
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="focusActions">
+                                <span class="checkmark"></span>
+                                Action items and recommendations
+                            </label>
+                        </div>
+                        <div class="form-hint">Select what types of content to emphasize in summaries</div>
+                    </div>
+                </section>
+
+                <!-- Privacy Section -->
+                <section class="form-section">
+                    <h2 class="section-title">Privacy &amp; Data</h2>
+                    <p class="section-description">Your data stays on your device and is never sent to external servers.</p>
+
+                    <div class="privacy-info">
+                        <div class="privacy-item">
+                            <div class="privacy-icon">🔒</div>
+                            <div class="privacy-text">
+                                <h4>Local Processing</h4>
+                                <p>All AI processing happens locally using Chrome's built-in AI</p>
+                            </div>
+                        </div>
+                        <div class="privacy-item">
+                            <div class="privacy-icon">💾</div>
+                            <div class="privacy-text">
+                                <h4>Local Storage</h4>
+                                <p>Your profile and preferences are stored only on your device</p>
+                            </div>
+                        </div>
+                        <div class="privacy-item">
+                            <div class="privacy-icon">🚫</div>
+                            <div class="privacy-text">
+                                <h4>No External Servers</h4>
+                                <p>No data is sent to external servers or third parties</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Capabilities Section -->
+                <section class="form-section">
+                    <h2 class="section-title">AI Capabilities</h2>
+                    <p class="section-description">Status of Chrome's built-in AI features available for WebBriefer.</p>
+
+                    <div id="aiCapabilitiesContainer" class="ai-capabilities">
+                        <div class="ai-capability-item" id="languageModelCapability">
+                            <div class="ai-capability-icon">🤖</div>
+                            <div class="ai-capability-content">
+                                <h4>Language Model</h4>
+                                <p class="ai-capability-description">Advanced text generation and analysis</p>
+                                <div class="ai-capability-status" id="languageModelStatus">
+                                    <span class="status-badge checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ai-capability-item" id="summarizerCapability">
+                            <div class="ai-capability-icon">📝</div>
+                            <div class="ai-capability-content">
+                                <h4>Summarizer</h4>
+                                <p class="ai-capability-description">Intelligent content summarization</p>
+                                <div class="ai-capability-status" id="summarizerStatus">
+                                    <span class="status-badge checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ai-capability-item" id="translatorCapability">
+                            <div class="ai-capability-icon">🌐</div>
+                            <div class="ai-capability-content">
+                                <h4>Translator</h4>
+                                <p class="ai-capability-description">Multi-language translation support</p>
+                                <div class="ai-capability-status" id="translatorStatus">
+                                    <span class="status-badge checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ai-info-note">
+                            <div class="ai-info-icon">ℹ️</div>
+                            <div class="ai-info-text">
+                                <p><strong>Note:</strong> AI features require Chrome 138+ and may need to download models on first use. Some features may require specific hardware requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <button type="button" id="resetBtn" class="btn btn-secondary">Reset to Defaults</button>
+                    <button type="submit" id="saveBtn" class="btn btn-primary">Save Profile</button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message hidden">
+                <div class="success-icon">✅</div>
+                <h3>Profile Saved Successfully!</h3>
+                <p>Your personalized settings have been saved. You can now enjoy tailored summaries.</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden">
+                <div class="error-icon">❌</div>
+                <h3>Error Saving Profile</h3>
+                <p id="errorText">Please check your inputs and try again.</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 WebBriefer - Powered by Chrome Built-in AI</p>
+                <div class="footer-links">
+                    <a href="#" id="aboutLink">About</a>
+                    <a href="#" id="helpLink">Help</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
